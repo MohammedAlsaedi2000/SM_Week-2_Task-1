@@ -1,5 +1,5 @@
 # SM_Week-2_Task-1
-Arduino servo code to simulate Robot walk
+Arduino servo code to simulate Robot walk. But this one shows real movement just like as if the robot legs are walking.
 
 The following code shows the sequence movement of each servo as if it is walking:
 ---------------------------------------------------------------------------------------------------------------------------------------
