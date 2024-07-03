@@ -1,0 +1,81 @@
+
+
+The following code is the first task of the 2nd week which is "Write an algorith to operate servo motors to simulate robot's walk" + a given circuit as a hint:
+
+-------------------------------------------------------------------------------------------------------------------------------------
+#include <Servo.h>
+
+Servo servo_ankle1;
+Servo servo_knee1;
+Servo servo_thigh1;
+///////////////////////////////////////////////////
+Servo servo_ankle2;
+Servo servo_knee2;
+Servo servo_thigh2;
+
+int potpin_ankle1 = A0;  
+int val_ankle1; 
+
+int potpin_knee1 = A1;  
+int val_knee1; 
+
+int potpin_thigh1 = A2;  
+int val_thigh1; 
+
+////////////////////////////////////////////////
+
+int potpin_ankle2 = A3;  
+int val_ankle2; 
+
+int potpin_knee2 = A4;  
+int val_knee2; 
+
+int potpin_thigh2 = A5;  
+int val_thigh2; 
+
+void setup() {
+  servo_ankle1.attach(3);
+  servo_knee1.attach(5);
+  servo_thigh1.attach(6);
+  servo_ankle2.attach(9);
+  servo_knee2.attach(10);
+  servo_thigh2.attach(11);  
+}
+
+void loop() {
+  val_ankle1 = analogRead(potpin_ankle1);            
+  val_ankle1 = map(val_ankle1, 0, 1023, 0, 180);    
+  servo_ankle1.write(val_ankle1);                  
+  delay(15);
+
+  val_knee1 = analogRead(potpin_knee1);            
+  val_knee1 = map(val_knee1, 0, 1023, 0, 180);    
+  servo_knee1.write(val_knee1);                  
+  delay(15);
+
+  val_thigh1 = analogRead(potpin_thigh1);            
+  val_thigh1 = map(val_thigh1, 0, 1023, 0, 180);    
+  servo_thigh1.write(val_thigh1);                  
+  delay(15);
+  
+  ///////////////////////////////////////////////////////////////////
+
+  val_ankle2 = analogRead(potpin_ankle2);            
+  val_ankle2 = map(val_ankle2, 0, 1023, 0, 180);    
+  servo_ankle2.write(val_ankle2);                  
+  delay(15);
+
+  val_knee2 = analogRead(potpin_knee2);            
+  val_knee2 = map(val_knee2, 0, 1023, 0, 180);    
+  servo_knee2.write(val_knee2);                  
+  delay(15);
+
+  val_thigh2 = analogRead(potpin_thigh2);            
+  val_thigh2 = map(val_thigh2, 0, 1023, 0, 180);    
+  servo_thigh2.write(val_thigh2);                  
+  delay(15);                       
+}
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------
